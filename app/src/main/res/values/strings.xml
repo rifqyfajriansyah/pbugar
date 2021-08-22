@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PBugar</string>
+
+    <string-array name="list_lapangan">
+        <item>O1F01-Futsal-Outdoor-4.3-Kalideres Futsal-100K/Jam-futsal3out3</item>
+        <item>O1F01-Futsal-Outdoor-4.3-Kumbang Futsal-100K/Jam-futsal3out3</item>
+        <item>O1F01-Futsal-Outdoor-4.3-Kambal Futsal-100K/Jam-futsal3out3</item>
+        <item>O1F01-Badminton-Outdoor-4.3-Kalideres Badminton-100K/Jam-futsal3out3</item>
+        <item>O1F01-Basket-Outdoor-4.3-Citra 1 Basket-100K/Jam-futsal3out3</item>
+    </string-array>
+</resources>
