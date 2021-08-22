@@ -253,14 +253,14 @@
 
         </androidx.cardview.widget.CardView>
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/lapanganMap"
             android:src="@drawable/futsal1out1"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_width="match_parent"
-            android:layout_height="160dp"/>
+            android:layout_height="160dp"/>-->
 
         <LinearLayout
             android:id="@+id/lapanganJam"
