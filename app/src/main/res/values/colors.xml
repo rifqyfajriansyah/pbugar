@@ -5,6 +5,7 @@
     <color name="colorPrimaryDark">#3A3A50</color>
     <color name="colorText">#737373</color>
     <color name="colorSubtle">#9599a3</color>
-    <color name="colorAccent">#F6F6F6</color>
+    <color name="colorAccent">#F6F6F6</color><!--339599A3-->
     <color name="colorLight">#FAFCFE</color>
+    <color name="colorBlack">#000000</color>
 </resources>

@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -29,6 +31,8 @@ public class MenuUtama extends AppCompatActivity {
     RecyclerView recLapangan;
     MenuAdapter menuAdapter;
     String tipeku;
+
+    ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +74,14 @@ public class MenuUtama extends AppCompatActivity {
                 setTipe("Badminton");
             }
         });
+
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, JadwalActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void setWidget(){
@@ -84,6 +96,8 @@ public class MenuUtama extends AppCompatActivity {
         txBasket = findViewById(R.id.txBasket);
         txFutsal = findViewById(R.id.txFutsal);
         txNama = findViewById(R.id.menuNama);
+
+        img = findViewById(R.id.menuUtamaJadwalku);
 
         recLapangan = findViewById(R.id.menuRecycle);
 

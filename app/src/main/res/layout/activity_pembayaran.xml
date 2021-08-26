@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PembayaranActivity">
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/bayarBack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran"
+            android:textColor="@android:color/background_light"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Pemesanan"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_love"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lapangan 2, STC Futsal"
+                    android:id="@+id/bayarinfo1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_love"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6 Agustus 2021, 09.00-11.00 WIB"
+                    android:id="@+id/bayarinfo2"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informasi Pemesanan"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/bayarCb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Samakan dengan profil"
+                    android:textColor="@color/colorText"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/colorLight">
+
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:id="@+id/bayarNama"
+                    android:background="#339599A3"
+                    android:paddingLeft="10dp"
+                    android:hint="Nama pemesan"
+                    android:textColor="@color/colorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomor HP/ Telepon"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardBackgroundColor="@color/colorLight">
+
+                <EditText
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:id="@+id/bayarTelepon"
+                    android:background="#339599A3"
+                    android:paddingLeft="10dp"
+                    android:hint="Nomor HP/Telepon"
+                    android:textColor="@color/colorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metode Pembayaran"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Transfer Bank"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/icon_love"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bank BCA"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/bayarBCA"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/icon_love"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Bank Mandiri"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/bayarMandiri"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/icon_love"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginRight="20dp"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bank BRI"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@android:color/background_dark"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/bayarBRI"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Bayar"/>
+
+            <TextView
+                android:id="@+id/bayarHarga"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="300.000 IDR"/>
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="20dp"
+            android:id="@+id/bayarButton"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bayar"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:textStyle="bold"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

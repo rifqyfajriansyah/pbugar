@@ -6,11 +6,16 @@ import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import inside.books.trypns.adapter.ViewPagerAdapter;
 
@@ -27,9 +32,12 @@ public class DetailLapangan extends AppCompatActivity {
     Integer[] images  = new Integer[3];
     String[] data;
 
+    LinearLayout lJam;
     ImageView imBack, imLokasi;
-    TextView txNama, txBintang, txPenjelasan, txCjam, txClokasi, txJam;
-    CardView cdJam, cdLokasi, cdReservasi, cdCjam, cdClokasi;
+    TextView txNama, txBintang, txPenjelasan, txCjam, txClokasi;
+    CardView cdReservasi, cdCjam, cdClokasi;
+
+    Intent i;
 
 
     @Override
@@ -42,8 +50,22 @@ public class DetailLapangan extends AppCompatActivity {
         initWidget();
         getDataku();
 
+        setOperasi("Operasional");
 
 
+        cdClokasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setOperasi("Lokasi");
+            }
+        });
+
+        cdCjam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setOperasi("Operasional");
+            }
+        });
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -68,6 +90,14 @@ public class DetailLapangan extends AppCompatActivity {
             }
         });
 
+        cdReservasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                i = new Intent(context, ReservasiActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
 
     private void getDataku() {
@@ -77,8 +107,8 @@ public class DetailLapangan extends AppCompatActivity {
 
         data = completeData.split("-");
         images[0] = getImage(data[6]);
-        images[1] = getImage(data[6]);
-        images[2] = getImage(data[6]);
+        images[1] = getImage(data[7]);
+        images[2] = getImage(data[8]);
 
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(context, images);
@@ -103,12 +133,34 @@ public class DetailLapangan extends AppCompatActivity {
 
         dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
 
+        txNama.setText(data[1]);
+        txBintang.setText(data[2]);
+        txPenjelasan.setText(data[10]);
+
+        Glide.with(context).load(getImage(data[9])).into(imLokasi);
+
     }
 
     private void initWidget(){
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         sliderDotspanel = (LinearLayout) findViewById(R.id.SliderDots);
+
+        imBack = findViewById(R.id.lapanganBack);
+        imLokasi = findViewById(R.id.lapanganMap);
+
+        lJam = findViewById(R.id.lapanganJam);
+
+        txNama = findViewById(R.id.lapanganNama);
+        txBintang = findViewById(R.id.lapanganBintang);
+        txPenjelasan = findViewById(R.id.lapanganDetail);
+        txCjam = findViewById(R.id.lapanganTextOperasional);
+        txClokasi = findViewById(R.id.lapanganTextLokasi);
+
+        cdCjam = findViewById(R.id.lapanganOperasional);
+        cdClokasi = findViewById(R.id.lapanganLokasi);
+
+        cdReservasi = findViewById(R.id.lapanganReservasi);
 
 
 
@@ -120,6 +172,37 @@ public class DetailLapangan extends AppCompatActivity {
 
         return drawableResourceId;
     }
+
+
+    private void setOperasi(String text){
+
+        if(text.equals("Operasional")){
+
+            lJam.setVisibility(View.VISIBLE);
+            imLokasi.setVisibility(View.GONE);
+
+            cdCjam.setCardBackgroundColor(Color.parseColor("#983732"));
+            txCjam.setTextColor(Color.parseColor("#FFFFFF"));
+
+            cdClokasi.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
+            txClokasi.setTextColor(Color.parseColor("#000000"));
+
+
+        }else{
+
+            lJam.setVisibility(View.GONE);
+            imLokasi.setVisibility(View.VISIBLE);
+
+            cdClokasi.setCardBackgroundColor(Color.parseColor("#983732"));
+            txClokasi.setTextColor(Color.parseColor("#FFFFFF"));
+
+            cdCjam.setCardBackgroundColor(Color.parseColor("#FFFFFF"));
+            txCjam.setTextColor(Color.parseColor("#000000"));
+
+        }
+    }
+
+
 
 
 

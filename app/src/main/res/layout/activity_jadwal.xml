@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JadwalActivity">
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="40dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/jadwalBack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jadwalmu"
+            android:textColor="@android:color/background_light"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/futsal1out1"
+                    android:id="@+id/jadwalImage"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/jadwalInfo1"
+                android:text="Lapangan Samba Futal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/jadwalInfo2"
+                android:text="10:00 | Jumat, 6 Agustus 2021"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/jadwalInfo3"
+                android:text="Jl. Samba Jakarta Selatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama"/>
+
+            <TextView
+                android:id="@+id/jadwalNama"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rifqy"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/futsal1out1"
+                    android:id="@+id/jadwalLokasi"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_weight="1"
+                    android:id="@+id/jadwalNotifikasi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Notifikasi"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/jadwalButton"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/colorPrimary">
+
+                    <TextView
+                        android:id="@+id/jadwalButtonText"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bayar"
+                        android:textColor="@android:color/background_light"
+                        android:textAlignment="center"
+                        android:textStyle="bold"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

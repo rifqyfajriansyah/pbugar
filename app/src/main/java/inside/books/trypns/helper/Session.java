@@ -11,6 +11,9 @@ public class Session {
     public static final String EMAIL = "email";
     public static final String TIPELOGIN = "tipelogin";
 
+    public static final String INDEXTANGGAL = "indexTanggal";
+    public static final String INDEXJAM = "indexJam";
+
     SharedPreferences sp;
     SharedPreferences.Editor spEditor;
 
@@ -45,5 +48,10 @@ public class Session {
     public int getLogin(){
         return sp.getInt(TIPELOGIN, 0);
     }
+
+    public int getIndexTanggal(){ return sp.getInt(INDEXTANGGAL, 0);}
+
+    public int getIndexJam(){ return sp.getInt(INDEXJAM, 0);}
+
 
 }

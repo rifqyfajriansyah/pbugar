@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailLapangan"
+        <activity android:name=".JadwalActivity"  android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PembayaranSelesai" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ReservasiSelesai" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".KonfirmasiActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PembayaranActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ReservasiActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailLapangan"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MenuUtama"
